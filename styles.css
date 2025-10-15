@@ -1,1 +1,11 @@
-
+body{
+    background-color: #8D9F87;
+    color: #000000;
+}
+p{
+    line-height: 2.25em;
+}
+img{
+    width:300px;
+    float:left;
+}
