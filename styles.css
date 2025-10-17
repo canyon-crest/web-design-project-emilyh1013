@@ -4,7 +4,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #container{
-    width:800px;
+    width: 1000px;
     margin: 20px auto;
     border: 10px  double black;
     padding: 5px 60px;
@@ -116,16 +116,16 @@ li{
 @media (max-width:992px){
     #container{
         background-color:#94a98d;
-        width:100%;
-    }
-    body, p, #container{
+        width:90%;
+        padding: 0;
         margin: 0;
-        border:none;
-        padding:0;
-        background-color:#4b6d40
     }
-    h3{
-        margin-left: 10px;
+    body, p, #container, h3{
+        margin: 0 auto;
+        border:none;
+        padding:0 auto;
+        background-color:#4b6d40;
+        width: 90%;
     }
     p{
         padding: 20px;
