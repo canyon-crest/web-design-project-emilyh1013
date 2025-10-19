@@ -3,24 +3,27 @@ body{
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#container{
-    width: 1000px;
-    margin: 20px auto;
-    border: 10px  double black;
-    padding: 5px 60px;
-    background-color: #4b6d40
+#container {
+  max-width: 1100px; 
+  width: 95%;
+  margin: 20px auto;
+  border: 10px double black;
+  padding: 20px 40px;
+  background-color: #4b6d40;
+  box-sizing: border-box;
 }
-h1{
-    background-color: #1e3716;
-    border: 3px solid black;
-    border-radius: 7.5px;
-    padding: 15px 10px;
-    text-align: center;
-    width: 50%;
-    font-size: 50px;
-    font-weight:900;
-    margin: 10px auto;
-    color: #94a98d;
+h1 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  background-color: #1e3716;
+  border: 3px solid black;
+  border-radius: 7.5px;
+  padding: 15px 10px;
+  font-size: 50px;
+  font-weight: 900;
+  color: #94a98d;
 }
 h2{
     font-size: 25px;
@@ -84,10 +87,15 @@ a:active{
     width: 300px;
     margin-left: 5px;
 }
-.highlight{
-    background-color: yellow;
-    color:  black;
+.highlight {
+  background: linear-gradient(90deg, yellow, #f7f0b2);
+  background-size: 200% auto;
+  animation: shine 2s linear infinite;
 }
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
 #sidebar{
     background-color:#1e3716;
     width: 200px;
@@ -97,6 +105,9 @@ a:active{
     margin: 20px;
     margin-top: 90px;
     color: white;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 25px;
 }
 #sidebar h3{
     background-color: black;
@@ -104,47 +115,104 @@ a:active{
     padding: 5px;
     margin: 5px auto;
 }
+#sidebar:hover {
+  transform: scale(1.02);
+  background-color: #2b4e23;
+}
 li{
     font-style: italic;
 }
+#sidebar a:hover {
+  color: #ffffff !important;
+}
+#sidebar a:visited {
+    color: #b2c5d4;
+}
 @media (max-width:1200px){
     #container{
-        background-color:#94a98d;
+        background-color:#4b6d40;
         width:100%;
     }
 }
 @media (max-width:992px){
+    #sidebar{
+        display:none;
+    }
     #container{
         background-color:#94a98d;
-        width:90%;
+        max-width:100%;
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
+        border: 0;
     }
     body, p, #container, h3{
         margin: 0 auto;
-        border:none;
-        padding:0 auto;
-        background-color:#4b6d40;
-        width: 90%;
+        border:0;
+        padding:0;
+        background-color:#94a98d;
+        width: 95%;
     }
     p{
         padding: 20px;
         color: white;
     }
+    h2{
+        background-color:#4b6d40
+    }
+    img {
+    max-width: 100%;
+}
+
 }
 @media(max-width:768px){
-    #sidebar{
-        display:none;
-    }
-    h1,{
+    h1{
         border:none;
         background:none;
         color:white;
-        width:90px;
+        width:100%;
+        font-size:35px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
     img, #pic1, #pic2, #pic3{
         width:200px;
         height:200px;
     }
+    h2{
+        border:none;
+        background:none;
+        width:100%;
+        margin-top:0px;
+    }
+    body, p, #container, h3{
+        width: 94%;
+    }
 }
+.animate-character{
+    margin: 5px auto;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #326421 0%,
+        #133906 15%,
+        #071a01 30%,
+        rgb(0, 0, 0) 50%,
+        #071a01 70%,
+        #133906 85%,
+        #326421 100%
 
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #fff; 
+    -webkit-text-fill-color: transparent; 
+    margin-bottom: 20px;
+    animation: textclip 4s linear infinite;
+    display: inline-block;  
+}
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
