@@ -173,7 +173,7 @@ li{
         border:0;
         padding:0;
         background-color:#94a98d;
-        width: 95%;
+        width: 92.5%;
     }
     p{
         padding: 20px;
@@ -208,7 +208,7 @@ li{
         margin-top:0px;
     }
     body, p, #container, h3{
-        width: 94%;
+        width: 87.5%;
     }
 }
 .animate-character{
