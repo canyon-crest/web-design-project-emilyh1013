@@ -12,6 +12,12 @@ body{
   background-color: #4b6d40;
   box-sizing: border-box;
 }
+#container:hover {
+  border-image: linear-gradient(90deg, #c6e7b5, #4b6d40, #c6e7b5) 1;
+  box-shadow: 0 0 20px #1e3716;
+  transition: all 0.5s ease-in-out;
+}
+
 h1 {
   text-align: center;
   display: block;
@@ -51,14 +57,23 @@ p{
     border: 5px double black;
     border-radius: 10px;
 }
-img{
-    width:300px;
-    float:left;
-    margin-right: 20px;
-    border: 5px solid #4b6d40;
-    border-radius: 15px;
-    height: 300px;
+img {
+  width:300px;
+  float:left;
+  margin-right: 20px;
+  border: 5px solid #4b6d40;
+  border-radius: 15px;
+  height: 300px;
+  filter: grayscale(100%);
+  transition: filter 0.6s ease, transform 0.4s ease;
+
 }
+img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+
 
 a:link{ 
     color: #5e6eab
@@ -81,7 +96,11 @@ a:active{
     float: right;
     width: 300px;
     margin-left: 5px;
+    border: none;
+    position: relative;
+    z-index: 1; /* lower priority than sidebar */
 }
+
 #pic3 {
     float: left;
     width: 300px;
@@ -96,7 +115,7 @@ a:active{
   to { background-position: 200% center; }
 }
 
-#sidebar{
+#sidebar {
     background-color:#1e3716;
     width: 200px;
     line-height: 2.25em;
@@ -108,7 +127,11 @@ a:active{
     transition: all 0.3s ease;
     position: sticky;
     top: 25px;
+
+    /* ADD THESE */
+    z-index: 5;
 }
+
 #sidebar h3{
     background-color: black;
     border: 5px double white;
